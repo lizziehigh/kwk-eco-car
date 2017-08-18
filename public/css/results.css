@@ -1,0 +1,43 @@
+
+body {
+    background: url("https://i.pinimg.com/originals/03/71/42/037142104e9cbc5ffe4cef1229306ffc.jpg");
+    background-repeat:no-repeat;
+    background-size: cover;
+    
+    background-color: none !important;
+
+}
+
+/*.collapse {*/
+/*  height: auto;*/
+/*  width: auto;*/
+/*}*/
+
+/*.collapse.height {*/
+/*  position: relative;*/
+/*  height: 0;*/
+/*  overflow: hidden;*/
+/*  -webkit-transition: height 0.35s ease;*/
+/*  -moz-transition: height 0.35s ease;*/
+/*  -o-transition: height 0.35s ease;*/
+/*  transition: height 0.35s ease;*/
+/*}*/
+
+/*.collapse.width {*/
+/*  position: relative;*/
+/*  width: 0;*/
+/*  overflow: hidden;*/
+/*  -webkit-transition: width 0.35s ease;*/
+/*  -moz-transition: width 0.35s ease;*/
+/*  -o-transition: width 0.35s ease;*/
+/*  transition: width 0.35s ease;*/
+/*}*/
+
+/*.collapse.in.width {*/
+/*  width: auto;*/
+/*}*/
+
+/*.collapse.in.height {*/
+/*  height: auto;*/
+/*}*/
+

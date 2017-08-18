@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Eco-Car</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="css/grayscale.css" rel="stylesheet">
+     <style>
+        .button {
+          display: inline-block;
+          border-radius: 4px;
+          background-color: #2A5743;
+          border: none;
+          color: #FFFFFF;
+          text-align: center;
+          font-size: 18px;
+          padding: 10px;
+          height: 50px;
+          width: 150px;
+          transition: all 0.5s;
+          cursor: pointer;
+          margin: 5px;
+        }
+        
+        .button span {
+          cursor: pointer;
+          display: inline-block;
+          position: relative;
+          transition: 0.5s;
+        }
+        
+        .button span:after {
+          content: '\00bb';
+          position: absolute;
+          opacity: 0;
+          top: 0;
+          right: -20px;
+          transition: 0.5s;
+        }
+        
+        .button:hover span {
+          padding-right: 25px;
+        }
+        
+        .button:hover span:after {
+          opacity: 1;
+          right: 0;
+        }
+    </style>
+
+</head>
+
+<body id="page-top">
+    
+    <form method = "post" action = "/noResults">
+        
+    </form>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <a class="navbar-brand" href="#page-top">Find Your Dream Car</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+    
+                  
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">Why EcoCar?</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#download">Take The Quiz</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">About Us</a>
+                </li>
+            </ul>
+            
+        </div>
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="masthead">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h1 class="brand-heading">Eco-Car Search</h1>
+                        <p class="intro-text">A free, responsive tool for the enviromentally concious driver to find their perfect car.</p>
+                        <a href="#about" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="content-section text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                   <h2>What are electric and hybrid cars?</h2>
+                   <p>Electric and Hybrid cars operate either solely on a battery or prioritize electric power before drawing from a diesel or gasoline engine. Hybrid cars have the best of both worlds: a healthy mixture of electric power and gasoline-fuel. When plugs are not available, these cars use the fuel tank. Electric cars run entirely on a battery and are better for those in or near a city with many plugs availible.
+                   
+                   <h2>Why make the switch?</h2>
+                   <p>Making the switch from the more traditional, gasoline-fueled engines to electric or hybrid power can help to reduce carbon dioxide emissions. In doing so, we are able to better protect the ozone layer and the environment as a whole. </p>
+                   <h2>So why Eco-Car?</h2>
+                   <p> This Eco-Car search is capable of helping you to make the best switch personalized just for you and to reduce your carbon footprint.</p>
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download-section content-section text-center">
+        <div class="container">
+            <div class="col-lg-8 mx-auto">
+                <h1>Take The Quiz</h1>
+                
+                <form class = "questions" method = "POST" action = "/results">
+                         <h4>American or Imported?</h4>
+                         <div class = "qs">
+                         <input class = "radios" type="radio" name="origin" value="american" checked>American<br>
+                         <input class = "radios" type="radio" name="origin" value="imported">Imported<br><br>
+                         </div>
+                         <h4>What is your price range?</h4>
+                         <div class = "qs">
+                         <input class = "radios" type="radio" name="price" value="$" checked> $  (<$20,000 - $30,999)<br>
+                         <input class = "radios" type="radio" name="price" value="$$"> $$  ($31,000 - $40,999)<br>
+                         <input class = "radios" type="radio" name="price" value="$$$"> $$$  (>40,000)<br><br>
+                         </div>
+                         
+                          <h4>What is your ideal car size?</h4>
+                          <div class = "qs">
+                         <input class = "radios" type="radio" name="size" value="Compact" checked>Compact<br>
+                         <input class = "radios" type="radio" name="size" value="Sedan">Sedan<br>
+                         <input class = "radios" type="radio" name="size" value="Large">Large<br><br>
+                          </div>
+                        <button class="button" style="vertical-align:middle"><span>Submit </span></button>
+                       
+                      </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="content-section text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2>Who We Are</h2>
+            
+                    <p>Straight out of the suburbs of Metro Detroit, we had a vision for everyone to reduce their emissions and stop the onset of climate change. Thanks to the Kode With Klossy camp, we were able to build upon this vision and bring it to life. </p> 
+                    <!--<p>Contact us <a href="http://startbootstrap.com/template-overviews/grayscale/">here</a> to learn more about how you can get involved.</p>-->
+                    <ul class="list-inline banner-social-buttons">
+                        <li class="list-inline-item">
+                            <a href="https://www.instagram.com/kodewithklossy/" class="btn btn-default btn-lg"><i class="fa fa-instagram fa-fw"></i> <span class="network-name">KWK Instagram</span></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://github.com/Lydia-Tan" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Lydia's Github</span></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://github.com/lizziehigh" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Lizzie's Github</span></a>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Links -->
+    <div id="More links">
+        <h4><center>Kode With Klossy Detroit 2017</center></h4>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; Lydia, Lizzie, and Mary</p>
+            <p>All MPGe and CO2 emission data gathered from www.fueleconomy.gov</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  
+    <!-- Custom scripts for this template -->
+    <script src="js/grayscale.min.js"></script>
+
+</body>
+
+</html>

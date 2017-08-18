@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Your Eco Cars</title>
+    <link href="css/results.css" rel="stylesheet">
+   
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+     <!--Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
+
+     <!--Custom styles for this template -->
+    <link href="css/grayscale.css" rel="stylesheet">
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <a class="navbar-brand" href="#page-top">Your Results</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+    
+                  
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                
+            </ul>
+            
+        </div>
+    </nav>
+      
+      
+    <div class = "row">
+    <% @answer.each do |car, car_info| %>
+    <div class = "col">
+      <div class="card" style="border: 5px solid black;margin-left: auto; margin-right:auto; width: 20rem; margin-top: 200px; min-height: 450px; padding: 20px; color: black;">
+        <img class="card-img-top" src="<%=car_info[:image]%>" alt="Card image cap" style = "height: 175px; width: 270px">
+        <div class="card-block">
+          <h4 class="card-title" ><%=car_info[:name]%></h4>
+            <p class = "card-text">Price: <%=car_info[:price]%></p> 
+            <p class = "card-text">Size: <%=car_info[:size]%></p>
+            <p class = "card-text">MPGe: <%=car_info[:MPGe]%></p>
+            <p class = "card-text">Emissions: <%=car_info[:Emissions]%></p>
+        
+        </div>
+      </div>
+    </div>
+    <%end%>
+   </div>
+   <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  
+    <!-- Custom scripts for this template -->
+    <script src="js/grayscale.min.js"></script>
+  </body>
+</html>
